@@ -1,0 +1,54 @@
+import random
+
+def role_d4():
+     return random.randint(1, 4)
+    
+def role_d6():
+    return random.randint(1,6)
+    
+def role_d8():
+    return random.randint(1,8)
+
+def role_d10():
+    return random.randint(1,10)
+
+def role_d12():
+    return random.randint(1, 12)
+
+def role_d20():
+    return random.randint(1, 20)
+
+def choose_dice():
+    choice= input("Choose Dice Roll: \n 4 is D4 \n 6 is D6 \n 8 is D8 \n 10 is D10 \n 12 is D12 \n 20 is D20 \n q to quit \n Can I role to seduce the dragon: \n")
+    if choice  == "q":
+        return False
+    dice_number = int(choice)
+    if dice_number == 4:
+        print(f" the number you rolled is: {role_d4()}")
+    elif dice_number == 6:
+        print(f" the number you rolled is: {role_d6()}")
+    elif dice_number == 8:
+        print (f"The number you rolled is: {role_d8()}")
+    elif dice_number == 10:
+        print(f" the number you rolled is: {role_d10()}")
+    elif dice_number == 12:
+        print(f" the number you rolled is: {role_d12()}")
+    elif dice_number ==20:
+        print(f"the number you rolled is: {role_d20()}")
+    else:
+        dice_number = input("The only complication here is your lack of ability to speak Common. Enter a proper dice roll or have a cup of tea: \n")
+    return True
+
+def main():
+     while True:
+         if not choose_dice():
+             print("My steel, unbendable. My will, unbreakable. Thank you for rolling")
+             break
+
+if __name__ == "__main__":
+     main()
+
+
+
+
+
